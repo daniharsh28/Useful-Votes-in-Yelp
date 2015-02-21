@@ -1,0 +1,23 @@
+INSTRUCTIONS TO RUN THE DATA
+
+required python libraries:
+scikit-learn,nltk,pandas and all its dependencies
+
+get the training yelp_training_set.zip and testing dataset yelp_test_set.zip from https://www.kaggle.com/c/yelp-recruiting/data
+store the dataset in the same working folder 
+
+Data preprocessing:
+
+1.run transformToCSV.py - which convert all the  json files in the dataset to csv
+2.run preprocessbusiness.py - to extract features related to the business data
+3.then run PreprocessCheckins.py - to extract features related to Checkin data
+4.then run PreprocessUser.py - to extract features related to User related data
+5.then run PreprocessReviewTraining.py - extracts the review text related features in training dataset
+6.then run PreprocessReviewTest.py - extracts the review text related features in testing dataset
+
+Training-Testing-Evaluation:
+
+run FinalModelandPrediction.py  to train the classifier and get the prediction as well as evaluate the results
+
+
+ 
