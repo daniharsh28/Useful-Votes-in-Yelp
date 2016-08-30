@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 import json
 from glob import glob
-################
+
 # Goal is to convert the JSON files into CSV files so that they can be
 # easily loaded into the python Pandas data-frame
 
@@ -20,7 +20,7 @@ def convert(x):
             del ob[k]
     return ob
 
-for json_filename in glob('E:\Fall 2014\Social Media Mining\yelp_test_set\*.json'):
+for json_filename in glob('../data/*.json'):
     csv_filename = '%s.csv' % json_filename[:-5]
     print 'Converting %s to %s' % (json_filename, csv_filename)
     df = pd.DataFrame([convert(line) for line in file(json_filename)])
